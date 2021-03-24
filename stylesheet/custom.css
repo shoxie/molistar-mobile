@@ -1,0 +1,68 @@
+#molistar {
+  background-image: url("../assets/star-bg.png");
+  background-size: cover;
+}
+.category {
+  background: linear-gradient(94.92deg, #f68d1e -6.16%, #ed1c24 95.78%);
+  border-radius: 30px;
+}
+.headline-sideway {
+  background: linear-gradient(94.92deg, #f68d1e -6.16%, #ed1c24 95.78%);
+}
+#molispecial {
+  background-image: url("../assets/banner-molispecial.png");
+  background-size: cover;
+}
+#startalk {
+  background-image: url("../assets/banner-startalk.png");
+  background-size: cover;
+}
+#molispecial-text span {
+  text-shadow: 4px 4px black;
+}
+.swiper-scrollbar-drag {
+  background: red !important;
+}
+.swiper-scrollbar {
+  width: 50% !important;
+  background: black !important;
+}
+.swiper-container-horizontal > .swiper-scrollbar {
+  left: 1rem !important;
+  top: 1rem !important;
+}
+.swiper-pagination-bullet-active {
+  background-color: #ed1c24 !important;
+}
+.bg-border-drop {
+  position: relative;
+  z-index: 2;
+}
+.bg-border-drop::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 5px;
+  border: 1px white solid;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.pink-gradiant {
+  background: linear-gradient(
+      180deg,
+      rgba(246, 141, 30, 0.2) 0%,
+      rgba(237, 28, 36, 0.2) 100%
+    ),
+    #ffffff;
+}
+#molispecial-breadcrum {
+  background-image: url("../assets/banner-molispecial.png");
+  background-size: cover;
+}
+.z-1 {
+    z-index: -1;
+}
+#menu {
+  display: none
+}

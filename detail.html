@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./stylesheet/index.css" />
+    <link rel="stylesheet" href="./stylesheet/custom.css" />
+    <link rel="stylesheet" href="./lib/swiper/swiper-bundle.css" />
+    <link rel="stylesheet" href="./lib/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./lib/font-awesome-pro-5.15.2/css/all.css" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <!-- header -->
+    <nav class="z-50 fixed top-0 container mx-auto p-2 border-b-2 bg-white">
+      <div class="flex flex-row justify-between pb-2">
+        <div>
+          <a href=""><img src="/assets/logo-light.svg" alt="" /></a>
+        </div>
+        <div>
+          <span
+            class="bg-molistar-red px-3 py-2 flex flex-row gap-3 text-white font-bold rounded-full"
+            ><img src="./assets/icon-hot.svg" alt="" />TIN HOT</span
+          >
+          <a href=""></a>
+        </div>
+      </div>
+    </nav>
+        <!-- navigation -->
+        <nav class="fixed bottom-0 z-50 bg-white border-t-2 border-molistar-grey py-2 w-full">
+          <div class="flex flex-row justify-around gap-2 px-3">
+              <a href="">
+                  <div class="flex flex-col items-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                          <path fill="none"
+                              d="M8.003,15c0-1.103,0.897-2,2-2h4c1.103,0,2,0.897,2,2v5h3.001l-0.001-8.586l-7-7l-7,7V20h3V15z" />
+                          <path fill="none" d="M10.003 15H14.003V20H10.003z" />
+                          <path fill="#ED1C24"
+                              d="M5.003,22h4h6h4c1.103,0,2-0.897,2-2v-9c0-0.265-0.105-0.52-0.293-0.707l-8-8c-0.391-0.391-1.023-0.391-1.414,0l-8,8 C3.108,10.48,3.003,10.735,3.003,11v9C3.003,21.103,3.9,22,5.003,22z M10.003,20v-5h4v5H10.003z M5.003,11.414l7-7l7,7L19.004,20 h-3.001v-5c0-1.103-0.897-2-2-2h-4c-1.103,0-2,0.897-2,2v5h-3V11.414z" />
+                      </svg>
+                      <p class="text-xs text-molistar-red">Trang Chủ</p>
+                  </div>
+              </a>
+              <a href="">
+                  <div class="flex flex-col items-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                          <path
+                              d="M20,22V10V9.276V4c0-1.103-0.897-2-2-2H6C4.897,2,4,2.897,4,4v5.276V10v12l8-4.572L20,22z M6,10V9.276V4h12v5.276V10v8.553 l-6-3.428l-6,3.428V10z" />
+                          <path
+                              d="M15.409,9.512c0.361-0.372,0.585-0.888,0.585-1.456S15.771,6.973,15.409,6.6c-0.361-0.372-0.86-0.603-1.412-0.603 c0,0-0.996-0.003-1.997,1.029c-1.001-1.032-1.997-1.029-1.997-1.029c-0.552,0-1.051,0.23-1.412,0.603 C8.229,6.973,8.006,7.487,8.006,8.056S8.229,9.14,8.591,9.512L12,13.203L15.409,9.512z" />
+                      </svg>
+                      <p class="text-xs">Moli Special</p>
+                  </div>
+              </a>
+              <a href="">
+                  <div class="flex flex-col items-center">
+                      <img src="./assets/moli-favico.svg" alt="">
+                      <p class="text-xs">Moli Star</p>
+                  </div>
+              </a>
+              <a href="">
+                  <div class="flex flex-col items-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                          <path
+                              d="M19.875,3H4.125C2.953,3,2,3.897,2,5v14c0,1.103,0.953,2,2.125,2h15.75C21.047,21,22,20.103,22,19V5 C22,3.897,21.047,3,19.875,3z M19.875,19H4.125c-0.057,0-0.096-0.016-0.113-0.016c-0.007,0-0.011,0.002-0.012,0.008L3.988,5.046 C3.995,5.036,4.04,5,4.125,5h15.75C19.954,5.001,19.997,5.028,20,5.008l0.012,13.946C20.005,18.964,19.96,19,19.875,19z" />
+                          <path
+                              d="M6 7H12V13H6zM13 15L6 15 6 17 13 17 14 17 18 17 18 15 14 15zM14 11H18V13H14zM14 7H18V9H14z" />
+                      </svg>
+                      <p class="text-xs">Tin mới</p>
+                  </div>
+              </a>
+              <button onclick="menu()">
+                  <div class="flex flex-col items-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                          <path
+                              d="M12 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2S13.1 10 12 10zM18 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2S19.1 10 18 10zM6 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2S7.1 10 6 10z" />
+                      </svg>
+                      <p class="text-xs">Chuyên mục</p>
+                  </div>
+              </button>
+          </div>
+      </nav>
+  
+  
+      <div id="menu" class="px-3">
+          <div class="flex flex-row py-2 border-b-2 border-molistar-grey">
+              <input type="text" placeholder="Nhập nội dung tìm kiếm" class="w-full">
+              <button><i class="fad fa-search px-3 py-4 bg-molistar-red text-white"></i></button>
+          </div>
+          <div class="pt-2 border-b-2 border-molistar-grey pb-5">
+              <h1 onclick="toggleMenu(1)">
+                  <div class="flex flex-row justify-between">
+                      <div class="flex flex-row gap-2">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                              <path
+                                  d="M6.516,14.323l-1.49,6.452c-0.092,0.399,0.068,0.814,0.406,1.047C5.603,21.94,5.801,22,6,22 c0.193,0,0.387-0.056,0.555-0.168L12,18.202l5.445,3.63c0.348,0.232,0.805,0.223,1.145-0.024c0.338-0.247,0.487-0.68,0.372-1.082 l-1.829-6.4l4.536-4.082c0.297-0.268,0.406-0.686,0.278-1.064c-0.129-0.378-0.47-0.644-0.868-0.676L15.378,8.05l-2.467-5.461 C12.75,2.23,12.393,2,12,2s-0.75,0.23-0.911,0.589L8.622,8.05L2.921,8.503C2.529,8.534,2.192,8.791,2.06,9.16 c-0.134,0.369-0.038,0.782,0.242,1.056L6.516,14.323z M9.369,9.997c0.363-0.029,0.683-0.253,0.832-0.586L12,5.43l1.799,3.981 c0.149,0.333,0.469,0.557,0.832,0.586l3.972,0.315l-3.271,2.944c-0.284,0.256-0.397,0.65-0.293,1.018l1.253,4.385l-3.736-2.491 c-0.336-0.225-0.773-0.225-1.109,0l-3.904,2.603l1.05-4.546c0.078-0.34-0.026-0.697-0.276-0.94l-3.038-2.962L9.369,9.997z" />
+                          </svg>
+                          <span class="font-bold">STAR</span>
+                      </div>
+                      <div>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                              <path d="M16.293 9.293L12 13.586 7.707 9.293 6.293 10.707 12 16.414 17.707 10.707z" />
+                          </svg>
+                      </div>
+                  </div>
+              </h1>
+  
+              <ul id="menu1" class="hidden">
+                  <li class="pt-2 pl-7"><a href="">Hậu Trường</a></li>
+                  <li class="pt-2 pl-7"><a href="">Papa</a></li>
+                  <li class="pt-2 pl-7"><a href="">Tv Shows</a></li>
+              </ul>
+          </div>
+          <div class="pt-2 border-b-2 border-molistar-grey pb-5">
+              <h1 onclick="toggleMenu(2)">
+                  <div class="flex flex-row justify-between">
+                      <div class="flex flex-row gap-2">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                              <path
+                                  d="M18,11c0-0.959-0.68-1.761-1.581-1.954C16.779,8.445,17,7.75,17,7c0-2.206-1.794-4-4-4c-1.516,0-2.822,0.857-3.5,2.104 C8.822,3.857,7.516,3,6,3C3.794,3,2,4.794,2,7c0,0.902,0.312,1.726,0.817,2.396C2.324,9.761,2,10.341,2,11v8c0,1.103,0.897,2,2,2 h12c1.103,0,2-0.897,2-2v-2.637l4,2v-7l-4,2V11z M13,5c1.103,0,2,0.897,2,2s-0.897,2-2,2c-1.103,0-2-0.897-2-2S11.897,5,13,5z M6,5 c1.103,0,2,0.897,2,2S7.103,9,6,9S4,8.103,4,7S4.897,5,6,5z" />
+                          </svg>
+                          <span class="font-bold">CINE</span>
+                      </div>
+                      <div>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                              <path d="M16.293 9.293L12 13.586 7.707 9.293 6.293 10.707 12 16.414 17.707 10.707z" />
+                          </svg>
+                      </div>
+                  </div>
+              </h1>
+  
+              <ul id="menu2" class="hidden">
+                  <li class="pt-2 pl-7"><a href="">Điện ảnh</a></li>
+                  <li class="pt-2 pl-7"><a href="">Web drama</a></li>
+                  <li class="pt-2 pl-7"><a href="">Truyền Hình</a></li>
+              </ul>
+          </div>
+          <div class="pt-2 border-b-2 border-molistar-grey pb-5">
+              <h1 onclick="toggleMenu(3)">
+                  <div class="flex flex-row justify-between">
+                      <div class="flex flex-row gap-2">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                              <path
+                                  d="M19.684,5.821l-9-3.272C10.071,2.326,9.387,2.415,8.853,2.79C8.318,3.163,8,3.775,8,4.428v6.129 C7.409,10.212,6.731,10,6,10c-2.206,0-4,1.794-4,4s1.794,4,4,4s4-1.794,4-4V4.428L19,7.7v6.856C18.409,14.212,17.731,14,17,14 c-2.206,0-4,1.794-4,4s1.794,4,4,4s4-1.794,4-4V7.7C21,6.862,20.471,6.106,19.684,5.821z M6,16c-1.103,0-2-0.897-2-2s0.897-2,2-2 s2,0.897,2,2S7.103,16,6,16z M17,20c-1.103,0-2-0.897-2-2s0.897-2,2-2s2,0.897,2,2S18.103,20,17,20z" />
+                          </svg>
+                          <span class="font-bold">MUSIC</span>
+                      </div>
+                      <div>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                              <path d="M16.293 9.293L12 13.586 7.707 9.293 6.293 10.707 12 16.414 17.707 10.707z" />
+                          </svg>
+                      </div>
+                  </div>
+              </h1>
+  
+              <ul id="menu3" class="hidden">
+                  <li class="pt-2 pl-7"><a href="">Hậu Trường</a></li>
+                  <li class="pt-2 pl-7"><a href="">Papa</a></li>
+                  <li class="pt-2 pl-7"><a href="">Tv Shows</a></li>
+              </ul>
+          </div>
+          <div class="pt-2 border-b-2 border-molistar-grey pb-5">
+              <h1 onclick="toggleMenu(4)">
+                  <div class="flex flex-row justify-between">
+                      <div class="flex flex-row gap-2">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                              <path
+                                  d="M13,10.551V9.873C14.724,9.429,16,7.86,16,6c0-2.206-1.794-4-4-4C9.794,2,8,3.794,8,6h2c0-1.103,0.897-2,2-2 c1.103,0,2,0.897,2,2s-0.897,2-2,2c-0.552,0-1,0.447-1,1v1.551l-8.665,7.702c-0.31,0.275-0.417,0.715-0.27,1.103S2.585,20,3,20h18 c0.415,0,0.787-0.257,0.935-0.645s0.04-0.827-0.271-1.103L13,10.551z M5.63,18L12,12.338L18.37,18H5.63z" />
+                          </svg>
+                          <span class="font-bold">FASHION</span>
+                      </div>
+                      <div>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                              <path d="M16.293 9.293L12 13.586 7.707 9.293 6.293 10.707 12 16.414 17.707 10.707z" />
+                          </svg>
+                      </div>
+                  </div>
+              </h1>
+  
+              <ul id="menu4" class="hidden">
+                  <li class="pt-2 pl-7"><a href="">Hậu Trường</a></li>
+                  <li class="pt-2 pl-7"><a href="">Papa</a></li>
+                  <li class="pt-2 pl-7"><a href="">Tv Shows</a></li>
+              </ul>
+          </div>
+          <div class="pt-2 border-b-2 border-molistar-grey pb-5">
+              <h1 onclick="toggleMenu(5)">
+                  <div class="flex flex-row justify-between">
+                      <div class="flex flex-row gap-2">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                              <path
+                                  d="M12,2C6.486,2,2,6.486,2,12s4.486,10,10,10s10-4.486,10-10S17.514,2,12,2z M19.931,11h-2.764 c-0.116-2.165-0.73-4.3-1.792-6.243C17.813,5.898,19.582,8.228,19.931,11z M12.53,4.027c1.035,1.364,2.427,3.78,2.627,6.973H9.03 c0.139-2.596,0.994-5.028,2.451-6.974C11.653,4.016,11.825,4,12,4C12.179,4,12.354,4.016,12.53,4.027z M8.688,4.727 C7.704,6.618,7.136,8.762,7.03,11H4.069C4.421,8.204,6.217,5.857,8.688,4.727z M4.069,13h2.974c0.136,2.379,0.665,4.478,1.556,6.23 C6.174,18.084,4.416,15.762,4.069,13z M11.45,19.973C10.049,18.275,9.222,15.896,9.041,13h6.113 c-0.208,2.773-1.117,5.196-2.603,6.972C12.369,19.984,12.187,20,12,20C11.814,20,11.633,19.984,11.45,19.973z M15.461,19.201 c0.955-1.794,1.538-3.901,1.691-6.201h2.778C19.587,15.739,17.854,18.047,15.461,19.201z" />
+                          </svg>
+                          <span class="font-bold">ĐỜI SỐNG</span>
+                      </div>
+                      <div>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                              <path d="M16.293 9.293L12 13.586 7.707 9.293 6.293 10.707 12 16.414 17.707 10.707z" />
+                          </svg>
+                      </div>
+                  </div>
+              </h1>
+  
+              <ul id="menu5" class="hidden">
+                  <li class="pt-2 pl-7"><a href="">Hậu Trường</a></li>
+                  <li class="pt-2 pl-7"><a href="">Papa</a></li>
+                  <li class="pt-2 pl-7"><a href="">Tv Shows</a></li>
+              </ul>
+          </div>
+          <div class="pt-2 border-b-2 border-molistar-grey pb-5">
+              <h1 onclick="toggleMenu(6)">
+                  <div class="flex flex-row justify-between">
+                      <div class="flex flex-row gap-2">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                              <path
+                                  d="M19.071,4.929c-1.895-1.895-4.405-2.938-7.07-2.938c-2.666,0-5.177,1.044-7.072,2.938c-3.899,3.898-3.899,10.243,0,14.142 c1.895,1.895,4.406,2.938,7.073,2.938c2.666,0,5.176-1.043,7.07-2.937C22.971,15.174,22.971,8.829,19.071,4.929z M12.181,4h-0.359 c0.061-0.001,0.119-0.009,0.18-0.009S12.12,3.999,12.181,4z M18.243,17H16l-1.258,2.516c-0.868,0.318-1.791,0.493-2.741,0.493 c-0.952,0-1.876-0.175-2.746-0.494L8,17.01H5.765c-0.846-1.052-1.387-2.269-1.623-3.532L6,11L4.784,8.567 c0.381-0.804,0.895-1.56,1.559-2.224c0.919-0.92,2.021-1.584,3.22-1.969L12,6l2.438-1.625c1.198,0.385,2.301,1.049,3.22,1.968 c0.663,0.663,1.177,1.418,1.558,2.221L18,11l1.858,2.478C19.623,14.737,19.085,15.95,18.243,17z" />
+                              <path d="M8.5 11L10 15 14 15 15.5 11 12 8.5z" />
+                          </svg>
+                          <span class="font-bold">THỂ THAO</span>
+                      </div>
+                      <div>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                              <path d="M16.293 9.293L12 13.586 7.707 9.293 6.293 10.707 12 16.414 17.707 10.707z" />
+                          </svg>
+                      </div>
+                  </div>
+              </h1>
+  
+              <ul id="menu6" class="hidden">
+                  <li class="pt-2 pl-7"><a href="">Hậu Trường</a></li>
+                  <li class="pt-2 pl-7"><a href="">Papa</a></li>
+                  <li class="pt-2 pl-7"><a href="">Tv Shows</a></li>
+              </ul>
+          </div>
+      </div>
+    <section class="px-3 pt-20">
+      <div class="flex flex-row gap-5">
+        <span><i class="far fa-music text-molistar-red"></i></span>
+        <span class="font-bold text-molistar-rail">MUSIC</span>
+        <span class="text-molistar-red">/</span>
+        <span class="font-bold">V-POP</span>
+      </div>
+      <div class="pt-5">
+        <span class="text-lg font-bold"
+          >Biểu cảm cực yêu của con gái Đông Nhi khi lần đầu diện áo dài đón
+          Tết</span
+        >
+      </div>
+      <div class="pt-5 flex flex-row gap-5">
+        <span class="font-bold">Trường Đỗ</span>
+        <span class="text-molistar-red">/</span>
+        <span class="text-molistar-rail">11:58 AM, 13/02/2021</span>
+      </div>
+      <div class="pt-5">
+        <span class="text-base font-bold"
+          >Nữ ca sĩ và ông xã năm nay không còn khung ảnh tình tứ bên nhau mà
+          một thành viên nhí đã có thể xen chính giữa ba mẹ.</span
+        >
+      </div>
+      <div class="pt-5">
+        <div class="flex flex-row gap-3 pt-2 text-molistar-red items-center">
+          <i class="fal fa-arrow-right"></i>
+          <a href=""
+            >5 mẹ bỉm sữa showbiz Việt tự tin diện áo tắm khoe đường cong sau
+            khi sinh</a
+          >
+        </div>
+        <div class="flex flex-row gap-3 pt-2 text-molistar-red items-center">
+          <i class="fal fa-arrow-right"></i>
+          <a href=""
+            >Ông ngoại Đông Nhi viết tâm thư sau khi chăm Winnie, Trấn Thành đọc
+            xong bật khóc giữa quán</a
+          >
+        </div>
+        <div class="flex flex-row gap-3 pt-2 text-molistar-red items-center">
+          <i class="fal fa-arrow-right"></i>
+          <a href=""
+            >Thế lực nhí Winnie từ liếc mắt đến nhăn mặt cũng làm tim ai tan
+            chảy</a
+          >
+        </div>
+      </div>
+      <div class="pt-5">
+        <img src="./assets/posts/60275c5fe7b14 1.png" alt="" />
+      </div>
+      <div class="pt-5">
+        <span
+          >Hôm nay mùng 1 Tết Tân Sửu, trên mạng xã hội ngập tràn những khung
+          ảnh hạnh phúc, ai cũng xinh đẹp rực rỡ, nhà nhà sum họp bên nhau. Các
+          nghệ sĩ cũng không ngoại lệ và Đông Nhi vừa mới đăng đàn bức ảnh 3
+          thành viên ngày đầu năm mới.</span
+        >
+      </div>
+      <div class="pt-5 flex flex-col items-center">
+        <img
+          src="./assets/posts/7k01AM3PoCcLCPlZfqjh9nC9wtp50PmL0l8RP5vo 1.png"
+          alt=""
+        />
+        <p class="italic">
+          Nữ ca sĩ chia sẻ: "Tụi mình là Nhi Thắng Winnie". (Ảnh: FBNV)
+        </p>
+      </div>
+      <div class="pt-5">
+        <p class="leading-7">
+          <strong>Bé Winnie đợi lì xì</strong><br />
+          Cách đây ít phút, trên trang cá nhân Đông Nhi và Ông Cao Thắng vừa cập
+          nhật bức ảnh đầu tiên của họ khi bước sang 2021. Lần này cực đặc biệt
+          khi có thành viên thứ 3 cùng xuất hiện với ba mẹ - công chúa Winnie.
+          Theo đó, mẹ đã chuẩn bị trang phục cực yêu, đồng điệu cho cả nhà để có
+          bức ảnh cùng nhau và công chúa cũng lần đầu được mặc áo dài với họa
+          tiết nhành hoa ngày xuân.<br />
+          Đông Nhi hào hứng: "Mùng 1 của Gia đình Nhi Thắng. Em Winnie đang đợi
+          lì xì ạ cô chú ơi". Có lẽ năm nay ba mẹ cũng có ngay "nguồn lao động"
+          chính trong mùa Tết này, Winnie hứa hẹn sẽ mang về khá nhiều bao đỏ
+          cho phụ huynh giữ hộ đây.<br />
+          <strong>Loạt ảnh đáng yêu của cả nhà</strong><br />
+          Đây là năm đầu tiên ông bà, vợ chồng Ông Cao Thắng có thêm "cục bông"
+          để đón năm mới chung nên họ cực hào hứng. Không chỉ một bức ảnh xinh
+          xắn mà cặp đôi còn tranh thủ chụp thêm rất nhiều khoảnh khắc nhí nhố,
+          tranh nhau hôn em bé đến "méo cả mặt". Đây là nhân vật mà ngày đầu
+          Xuân được vây quanh nhiều nhất trong nhà.<br />
+          Vợ chồng nữ ca sĩ nhắn nhủ: "Chúc mọi gia đình đều hạnh phúc, bình an
+          nha". Ai cũng mong các khán giả đều sẽ có một năm mới nhiều sức khỏe
+          và niềm vui, các trẻ em đều sẽ ngoan ngoãn, ăn mau chóng lớn.
+        </p>
+      </div>
+      <div class="pt-5 flex flex-row gap-5">
+        <button
+          class="w-full bg-blue-800 flex justify-center items-center py-3 rounded-lg"
+        >
+          <div class="flex flex-row gap-2 items-center text-white">
+            <i class="fab fa-facebook-square text-5xl"></i>
+            <div class="flex flex-col items-start gap-0">
+              <p>Chia sẻ</p>
+              <p>FACEBOOK</p>
+            </div>
+          </div>
+        </button>
+        <button
+          class="w-full bg-blue-500 flex justify-center items-center rounded-lg"
+        >
+          <div class="flex flex-row gap-2 items-center text-white">
+            <img class="w-12" src="./assets/zalo.svg" alt="" />
+            <div class="flex flex-col items-start gap-0">
+              <p>Chia sẻ</p>
+              <p>ZAlO</p>
+            </div>
+          </div>
+        </button>
+      </div>
+      <div class="pt-5 flex flex-row gap-5 border-b-2 pb-10">
+        <div>
+          <span class="font-bold text-sm">Từ khóa</span>
+        </div>
+        <div class="flex flex-row items-center flex-wrap gap-2">
+          <a href="">
+            <p
+              class="border-2 border-molistar-red p-2 px-3 rounded-full text-molistar-red hover:text-white hover:bg-molistar-red"
+            >
+              #Đông Nhi
+            </p>
+          </a>
+          <a href="">
+            <p
+              class="border-2 border-molistar-red p-2 px-3 rounded-full text-molistar-red hover:text-white hover:bg-molistar-red"
+            >
+              #Ông Cao Thắng
+            </p>
+          </a>
+          <a href="">
+            <p
+              class="border-2 border-molistar-red p-2 px-3 rounded-full text-molistar-red hover:text-white hover:bg-molistar-red"
+            >
+              #V-POP
+            </p>
+          </a>
+          <a href="">
+            <p
+              class="border-2 border-molistar-red p-2 px-3 rounded-full text-molistar-red hover:text-white hover:bg-molistar-red"
+            >
+              #Tết Nguyên Đán 2021
+            </p>
+          </a>
+        </div>
+      </div>
+      <div class="pt-5">
+        <div
+          class="flex items-center gap-2 px-3 py-4 text-base category w-7/12"
+        >
+          <svg
+            class="fill-current text-white"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M21.426,11.095l-17-8c-0.35-0.164-0.763-0.113-1.061,0.133C3.066,3.473,2.937,3.868,3.03,4.242l1.212,4.849L12,12	l-7.758,2.909L3.03,19.758c-0.094,0.374,0.036,0.77,0.335,1.015C3.548,20.923,3.772,21,4,21c0.145,0,0.29-0.031,0.426-0.095l17-8	C21.776,12.74,22,12.388,22,12S21.776,11.26,21.426,11.095z"
+            />
+          </svg>
+          <span class="font-bold text-white">BẠN MUỐN XEM</span>
+        </div>
+      </div>
+      <div class="pt-5">
+        <div class="grid grid-cols-2 gap-2">
+          <div class="col-span-1">
+            <a href=""
+              ><img class="w-full" src="./assets/posts/star-news-1.png" alt=""
+            /></a>
+          </div>
+          <div class="col-span-1">
+            <a href="">
+              <p class="line-clamp-3">
+                Những cặp bạn diễn vàng trên sân khấu cải lương
+              </p>
+            </a>
+          </div>
+        </div>
+        <div class="grid grid-cols-2 gap-2 pt-2">
+          <div class="col-span-1">
+            <a href=""
+              ><img class="w-full" src="./assets/posts/star-news-2.png" alt=""
+            /></a>
+          </div>
+          <div class="col-span-1">
+            <a href="">
+              <p class="line-clamp-3"></p>
+              Sao Việt đu trend thanh lý đồ của Ngọc Trinh với những mặt hàng
+              không ai..
+            </a>
+          </div>
+        </div>
+        <div class="grid grid-cols-2 gap-2 pt-2">
+          <div class="col-span-1">
+            <a href=""
+              ><img
+                class="w-full"
+                class="w-full"
+                src="./assets/posts/star-news-3.png"
+                alt=""
+              />
+            </a>
+          </div>
+          <div class="col-span-1">
+            <a href="">
+              <p class="line-clamp-3">
+                Cẩm Ly nghẹn ngào: Tôi muốn giải nghệ vì thanh quản bị nặng
+                chữa...
+              </p>
+            </a>
+          </div>
+        </div>
+        <div class="grid grid-cols-2 gap-2 pt-2">
+          <div class="col-span-1">
+            <a href=""
+              ><img class="w-full" src="./assets/posts/star-news-1.png" alt=""
+            /></a>
+          </div>
+          <div class="col-span-1">
+            <a href="">
+              <p class="line-clamp-3">
+                Những cặp bạn diễn vàng trên sân khấu cải lương
+              </p>
+            </a>
+          </div>
+        </div>
+        <div class="grid grid-cols-2 gap-2 pt-2">
+          <div class="col-span-1">
+            <a href="">
+              <img class="w-full" src="./assets/posts/star-news-2.png" alt=""
+            /></a>
+          </div>
+          <div class="col-span-1">
+            <a href="">
+              <p class="line-clamp-3"></p>
+              Sao Việt đu trend thanh lý đồ của Ngọc Trinh với những mặt hàng
+              không ai..
+            </a>
+          </div>
+        </div>
+        <div class="grid grid-cols-2 gap-2 pt-2">
+          <div class="col-span-1">
+            <a href="">
+              <img class="w-full" src="./assets/posts/star-news-3.png" alt=""
+            /></a>
+          </div>
+          <div class="col-span-1">
+            <a href="">
+              <p class="line-clamp-3">
+                Cẩm Ly nghẹn ngào: Tôi muốn giải nghệ vì thanh quản bị nặng
+                chữa...
+              </p>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="pt-5 flex flex-col gap-0">
+        <div
+          class="bg-molistar-red flex flex-row items-center justify-center gap-3 w-5/12 rounded-t-3xl px-2 py-4"
+        >
+          <img src="./assets/icon-hot.svg" alt="" />
+          <span class="text-white text-base font-bold">TIN NỔI BẬT</span>
+        </div>
+        <div>
+          <div
+            class="headline-sideway rounded-b-3xl rounded-tr-3xl px-5 text-white"
+          >
+            <div class="swiper-container">
+              <div class="swiper-wrapper pb-10 pt-5">
+                <div class="swiper-slide">
+                  <img src="./assets/headlines-4.png" class="w-full" alt="" />
+                  <a href="">
+                    <h3 class="font-bold line-clamp-2">
+                      Phía Ngọc Trinh lên tiếng giữa drama dùng ảnh 'pha ke' và
+                      đội giá trên trời khi pass đồ hiệu
+                    </h3>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <img src="./assets/headlines-5.png" class="w-full" alt="" />
+                  <a href="">
+                    <h3 class="font-bold line-clamp-2">
+                      Phương Loan, vợ cố nghệ sĩ Chí Tài lại lặng lẽ đi thăm
+                      chồng
+                    </h3>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <img src="./assets/headlines-6.png" class="w-full" alt="" />
+                  <a href="">
+                    <h3 class="font-bold line-clamp-2">
+                      Cuối cùng thì “Nàng thơ” của Hoàng Dũng đã công khai ảnh
+                      đôi thừa nhận mối quan hệ
+                    </h3>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <img src="./assets/headlines-4.png" class="w-full" alt="" />
+                  <a href="">
+                    <h3 class="font-bold line-clamp-2">
+                      Phía Ngọc Trinh lên tiếng giữa drama dùng ảnh 'pha ke' và
+                      đội giá trên trời khi pass đồ hiệu
+                    </h3>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <img src="./assets/headlines-5.png" class="w-full" alt="" />
+                  <a href="">
+                    <h3 class="font-bold line-clamp-2">
+                      Phương Loan, vợ cố nghệ sĩ Chí Tài lại lặng lẽ đi thăm
+                      chồng
+                    </h3>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <img src="./assets/headlines-6.png" class="w-full" alt="" />
+                  <a href="">
+                    <h3 class="font-bold line-clamp-2">
+                      Cuối cùng thì “Nàng thơ” của Hoàng Dũng đã công khai ảnh
+                      đôi thừa nhận mối quan hệ
+                    </h3>
+                  </a>
+                </div>
+              </div>
+
+              <!-- <div class="flex flex-row justify-between z-10">
+                  <div onclick="swiper.slidePrev()"><i
+                      class="fas fa-chevron-left bg-molistar-grey p-4 text-white rounded-lg"></i></div>
+                  <div onclick="swiper.slideNext()"><i
+                      class="fas fa-chevron-right bg-molistar-red p-4 text-white rounded-lg"></i></div>
+                </div> -->
+              <div class="swiper-pagination -pt-10" style="z-index: -1"></div>
+            </div>
+          </div>
+        </div>
+        <div class="pt-10">
+          <div class="flex justify-between items-center border-b-2 w-full">
+            <div class="pink-gradiant rounded-t-full rounded-l-full py-3 relative w-full">
+              <img
+                src="./assets/category-music.svg"
+                class="absolute -top-2 w-2/12 overflow-hidden"
+                alt=""
+              />
+              <span class="font-bold text-base pl-20 pr-48">MUSIC</span>
+            </div>
+            <!-- <div class="flex gap-5">
+                      <a href=""><span class="font-bold text-xl text-molistar-rail hover:text-molistar-red">V-POP</span></a>
+                      <a href=""><span class="font-bold text-xl text-molistar-rail hover:text-molistar-red">K-POP</span></a>
+                      <a href=""><span class="font-bold text-xl text-molistar-rail hover:text-molistar-red">ÂU MỸ</span></a>
+                  </div> -->
+          </div>
+        </div>
+        <div class="border-t-2 border-molistar-grey pb-3">
+            <a href="">
+                <p class="font-bold text-base py-2 line-clamp-2">Chúng Ta Của Hiện Tại và R&B All Night khác nhau như
+                    thế
+                    nào?</p>
+            </a>
+            <div class="grid grid-cols-2 gap-2">
+                <div class="col-span-1">
+                    <img class="rounded-lg" src="./assets/posts/news1.png" alt="">
+                </div>
+                <div class="col-span-1 flex flex-col justify-between">
+                    <a href="">
+                        <p class="text-sm">Có vòng hòa thanh và cấu trúc tương đồng, Chúng Ta Của Hiện Tại...</p>
+                    </a>
+                    <a href="">
+                        <p class="font-bold text-molistar-red">V-POP</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="border-t-2 border-molistar-grey pb-3">
+            <a href="">
+                <p class="font-bold text-base py-2 line-clamp-2">Sau nghi vấn Sơn Tùng đạo nhạc, nhạc sĩ Nguyễn Văn
+                    Chung có bình luận "ca sĩ bất chấp đúng sai" gây chú ý</p>
+            </a>
+            <div class="grid grid-cols-2 gap-2">
+                <div class="col-span-1">
+                    <img class="rounded-lg" src="./assets/posts/news2.png" alt="">
+                </div>
+                <div class="col-span-1 flex flex-col justify-between">
+                    <a href="">
+                        <p class="text-sm">Dòng bình luận của nhạc sĩ Nguyễn Văn Chung sau những ồn ào xoay...</p>
+                    </a>
+                    <a href="">
+                        <p class="font-bold text-molistar-red">V-POP</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="border-t-2 border-molistar-grey pb-3">
+            <a href="">
+                <p class="font-bold text-base py-2 line-clamp-2">Producer bản beat Lucky tung video mix giai điệu Có
+                    Chắc Yêu Là Đây,khẳng định Sơn Tùng M-TP đạo nhạc?</p>
+            </a>
+            <div class="grid grid-cols-2 gap-2">
+                <div class="col-span-1">
+                    <img class="rounded-lg" src="./assets/posts/news3.png" alt="">
+                </div>
+                <div class="col-span-1 flex flex-col justify-between">
+                    <a href="">
+                        <p class="text-sm">Chủ tài khoản kênh YouTube sở hữu bản beat Lucky đã đăng tải...</p>
+                    </a>
+                    <a href="">
+                        <p class="font-bold text-molistar-red">V-POP</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="border-t-2 border-molistar-grey pb-3">
+            <a href="">
+                <p class="font-bold text-base py-2 line-clamp-2">Biểu cảm cực yêu của con gái Đông Nhi khi lần đầu diện
+                    áo dài đón Tết</p>
+            </a>
+            <div class="grid grid-cols-2 gap-2">
+                <div class="col-span-1">
+                    <img class="rounded-lg" src="./assets/posts/news4.png" alt="">
+                </div>
+                <div class="col-span-1 flex flex-col justify-between">
+                    <a href="">
+                        <p class="text-sm">Nữ ca sĩ và ông xã năm nay không còn khung ảnh tình tứ bên nhau...</p>
+                    </a>
+                    <a href="">
+                        <p class="font-bold text-molistar-red">V-POP</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="border-t-2 border-molistar-grey pb-3">
+            <a href="">
+                <p class="font-bold text-base py-2 line-clamp-2">"Bộ tứ drama" Vpop có gì: ViruSs có hit trăm triệu
+                    view, Trang Pháp - Bình Gold cũng "không vừa" ...</p>
+            </a>
+            <div class="grid grid-cols-2 gap-2">
+                <div class="col-span-1">
+                    <img class="rounded-lg" src="./assets/posts/news5.png" alt="">
+                </div>
+                <div class="col-span-1 flex flex-col justify-between">
+                    <a href="">
+                        <p class="text-sm">ViruSs, Bình Gold, Trang Pháp và Phí Phương Anh những ngày qua là tâm...</p>
+                    </a>
+                    <a href="">
+                        <p class="font-bold text-molistar-red">V-POP</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="border-t-2 border-molistar-grey pb-3">
+            <a href="">
+                <p class="font-bold text-base py-2 line-clamp-2">Động thái Sơn Tùng M-TP ấn like ảnh của một nam rapper
+                    nhanh chóng được các fan bắt trọn.</p>
+            </a>
+            <div class="grid grid-cols-2 gap-2">
+                <div class="col-span-1">
+                    <img class="rounded-lg" src="./assets/posts/news6.png" alt="">
+                </div>
+                <div class="col-span-1 flex flex-col justify-between">
+                    <a href="">
+                        <p class="text-sm">Vừa qua, anh chàng rapper MCK khiến cho cộng đồng mạng không.</p>
+                    </a>
+                    <a href="">
+                        <p class="font-bold text-molistar-red">V-POP</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-10">
+        <div class="container mx-auto relative">
+            <div class="absolute gap-2 py-3 left-2 px-3 text-base category flex items-center">
+                <img src="./assets/icon-group.svg" alt="" />
+                <span class="font-bold text-white">CỘNG ĐỒNG NỔI BẬT</span>
+            </div>
+            <div onclick="commSwiper.slidePrev()"
+                class="z-20 absolute top-7 left-0 h-full flex justify-center items-center cursor-pointer">
+                <i class="fas fa-chevron-left bg-black text-white px-4 py-3 rounded-lg"></i>
+            </div>
+            <div onclick="commSwiper.slideNext()"
+                class="z-20 absolute top-7 right-0 h-full flex justify-center items-center cursor-pointer">
+                <i class="fas fa-chevron-right bg-white text-molistar-red px-4 py-3 rounded-lg shadow-md"></i>
+            </div>
+            <div class="swiper-container-community pt-24 overflow-hidden z-10">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide flex flex-col items-center">
+                        <a href=""><img src="./assets/comm-tho7mau.png" alt="" /></a>
+                        <a href="">
+                            <p class="font-bold pt-5 hover:text-molistar-red">THỎ 7 MÀU</p>
+                        </a>
+                    </div>
+                    <div class="swiper-slide flex flex-col items-center">
+                        <a href="">
+                            <img src="./assets/comm-tuyetbitch.png" alt="" />
+                        </a>
+                        <a href="">
+                            <p class="font-bold pt-5 flex flex-col items-center hover:text-molistar-red">
+                                TUYẾT BITCH
+                            </p>
+                        </a>
+                    </div>
+                    <div class="swiper-slide flex flex-col items-center">
+                        <a href=""><img src="./assets/comm-welax.png" alt="" /></a>
+                        <a href="">
+                            <p class="font-bold pt-5 flex flex-col items-center hover:text-molistar-red">WELAX</p>
+                        </a>
+                    </div>
+                    <div class="swiper-slide flex flex-col items-center">
+                        <a href=""><img src="./assets/comm-giadinhngo.png" alt="" /></a>
+                        <a href="">
+                            <p class="font-bold pt-5 hover:text-molistar-red">GIA ĐÌNH NGỐ</p>
+                        </a>
+                    </div>
+                    <div class="swiper-slide flex flex-col items-center">
+                        <a href=""><img src="./assets/comm-camchamchi.png" alt="" /></a>
+                        <a href="">
+                            <p class="font-bold pt-5 hover:text-molistar-red">CẢM CHĂM CHỈ</p>
+                        </a>
+                    </div>
+                    <div class="swiper-slide flex flex-col items-center">
+                        <a href=""><img src="./assets/comm-tuzki.png" alt="" /></a>
+                        <a href="">
+                            <p class="font-bold pt-5 hover:text-molistar-red">TUZKI VIỆT NAM</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bg-molistar-darkgrey">
+      <div class="container mx-auto">
+        <div class="flex flex-col justify-between pt-10 px-2">
+          <div class="px-2">
+            <img src="./assets/footer-logo.png" alt="" />
+            <p class="text-sm text-white font-bold py-3">
+              MOLI STAR - Kết nối STAR đến gần hơn với FAN
+            </p>
+          </div>
+          <div class="flex gap-5 px-2">
+            <img src="./assets/icon-facebook.svg" alt="" />
+            <img src="./assets/icon-youtube.svg" alt="" />
+            <img src="./assets/icon-instagram.svg" alt="" />
+          </div>
+        </div>
+
+        <div
+          class="grid grid-cols-1 grid-rows-3 gap-5 py-8 border-b-2 px-2 border-black"
+        >
+          <div class="flex flex-col">
+            <p class="text-gray-400">TỔNG BIÊN TẬP</p>
+            <p class="text-white">Nguyễn Quang Minh</p>
+          </div>
+          <div class="flex flex-col">
+            <p class="text-gray-400">PHÓ TỔNG BIÊN TẬP</p>
+            <p class="text-white">Vũ Thị Tuyết Vân - Trương Thụy Tường Vy</p>
+          </div>
+          <div class="flex flex-col">
+            <p class="text-gray-400">CHỊU TRÁCH NHIỆM NỘI DUNG</p>
+            <p class="text-white">Đỗ Thu Trang</p>
+          </div>
+        </div>
+        <div class="flex flex-col justify-between py-8">
+          <div class="pb-5">
+            <p class="text-white">© MOLI STAR - CTY CỔ PHẦN MOLI GROUP</p>
+            <p class="text-gray-400">Phone: 028 3535 0969</p>
+            <p class="text-gray-400">Email: hello@molistar.com</p>
+          </div>
+          <div class="flex flex-col justify-between gap-5">
+            <div>
+              <p class="text-white">HỢP TÁC NỘI DUNG</p>
+              <p class="text-gray-400">info@molistar.com</p>
+            </div>
+            <div>
+              <p class="text-white">HỢP TÁC QUẢNG CÁO</p>
+              <p class="text-gray-400">marketing@molistar.com</p>
+              <p class="text-gray-400">0912 345 678</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-black">
+        <div class="container mx-auto flex justify-center p-2">
+          <span class="text-white text-sm text-center"
+            >Giấy phép Tạp chí điện tử Molistar số: 13/GP-BTTTT do Bộ Thông tin
+            & Truyền Thông cấp ngày 11/01/2016</span
+          >
+        </div>
+      </div>
+    </section>
+    
+  </body>
+  <script src="./lib/swiper/swiper-bundle.js"></script>
+  <script src="./lib/swiper/swiper-bundle.min.js"></script>
+  <script src="./scripts.js"></script>
+  <script src="./lib/jquery/jquery-3.6.0.min.js"></script>
+</html>
